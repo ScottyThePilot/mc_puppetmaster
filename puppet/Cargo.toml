@@ -1,0 +1,15 @@
+[package]
+name = "puppet"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+async-trait = "0.1"
+lazy_static = { version = "1.4", optional = true }
+regex = { version = "1.5", optional = true }
+tokio = { version = "1.9", features = ["macros", "io-std", "io-util", "process", "sync"] }
+vte = { version = "0.10", optional = true }
+
+[features]
+default = ["parsing"]
+parsing = ["lazy_static", "regex", "vte"]

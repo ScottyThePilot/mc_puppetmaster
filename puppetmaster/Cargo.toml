@@ -1,0 +1,16 @@
+[package]
+name = "puppetmaster"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+async-trait = "0.1"
+chrono = { version = "0.4", features = ["serde"] }
+console = "0.15"
+dunce = "1.0.2"
+puppet = { path = "../puppet", default-features = false }
+serde = { version = "1.0", features = ["derive"] }
+thiserror = "1.0"
+time = "*"
+tokio = { version = "1.14", features = ["rt", "rt-multi-thread", "signal", "time"] }
+toml = "0.5"
